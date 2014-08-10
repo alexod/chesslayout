@@ -195,7 +195,7 @@ table {
 	font-size: 1.8em;
 }
 /* End of Main layout */
-/* Boards Layaut */
+/* Boards Layout */
 .checkers-wrap, .chess-wrap, .othello-wrap {
 	width: auto;
 }
@@ -285,7 +285,7 @@ table {
 	background: #545454;
 	color: #fff;
 }
-/* End of Boards Layaut */
+/* End of Boards Layout */
 /* Mobile layout */
 @media screen and (max-width: 940px) {
 	.wrapper {
