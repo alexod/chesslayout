@@ -70,10 +70,12 @@ table {
 }
 .content section.checkers {
 	min-width: 300px;
+	width: 300px;
 }
 .content section.othello {
 	padding-top: 54px;
 	min-width: 300px;
+	width: 300px;
 }
 .content section h2 {
 	margin: 15px 0;
