@@ -1,0 +1,325 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	padding: 10px;
+	line-height: 1;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #050607;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+/* Main layout */
+.wrapper {
+	min-width: 800px;
+}
+.content {
+	display: table;
+	width: 100%;
+}
+.content section {
+	display: table-cell;
+	width:33%;
+}
+.content section.chess {
+	display: block;
+	border: 1px solid #868686;
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom:10px;
+	background:#eee;
+}
+.content section.checkers {
+	min-width: 300px;
+}
+.content section.othello {
+	padding-top: 54px;
+	min-width: 300px;
+}
+.content section h2 {
+	margin: 15px 0;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-align: center;
+}
+.content section h3 {
+	margin: 10px 0;
+	font-size: 1em;
+	font-weight: 400;
+	text-align: center;
+}
+.content section .result {
+	width: 240px;
+	margin: 0 auto 10px;
+	border:1px solid #a39f9e;
+}
+.content section .result ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-left: 5px;
+}
+.content section .result ul li{
+	display: inline-block;
+	padding: 5px;
+}
+.content section .result dl {
+	padding: 5px 0 5px 2px;
+}
+.content section .result dd,
+.content section .result dt{
+	display: inline;
+	margin: 0;
+}
+.content section .result dt{
+	font-size: .8em;
+	font-weight: bold;
+}
+.content section .result dd .white-font,
+.content section .result dd .black-font {
+	font-size:1em;
+}
+.content section .result dd +.content section .result  dd:before {
+	content: ', '; /* add comma between definitions */
+}
+.content section .result dt:first-child:before { /* disable line break before the first <dt> */
+	content: none;
+}
+.content section .result dd ul {
+	margin-left: 20px;
+	margin-top: -19px;
+}
+.content section .result dd ul li {
+	padding: 0px;
+}
+.text-transform-vertical {
+	transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	
+}
+.radius-3px {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+}
+.shadow-1px {
+	-webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.88);
+	-moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.88);
+	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.88);
+}
+.circ {
+	display: block;
+	width: 20px;
+	height: 20px; 
+	border-radius: 50%;
+	margin: auto;
+	
+}
+.circ.red-color {
+	background-color: #ee1f25;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.circ.black-color {
+	background-color: #000;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.circ.white-color {
+	background-color: #fff;
+	box-shadow: 1px 1px 1px #ccc;
+}
+.white-font {
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	font-size: 1.3em;
+}
+.black-font {
+	color: #000;
+	text-shadow: 1px 1px 1px #000;
+	font-size: 1.3em;
+}
+/* End of Main layout */
+/* Boards Layaut */
+.checkers-wrap, .chess-wrap, .othello-wrap {
+	width: auto;
+}
+.checkers-wrap table, .chess-wrap table, .othello-wrap table {
+	margin: 0 auto;
+}
+.board table {
+	height: 240px;
+	width: 240px;
+	border-collapse: separate;
+	border:1px solid #404040;
+}
+.board table tbody {
+	border-collapse: collapse;
+}
+.chess-wrap,
+.checkers-wrap,
+.othello-wrap   {
+	position: relative; 
+}
+.board .board-block span {
+	position: absolute;
+	font-size: 32px;
+	font-weight: 700;
+	font-family: Italianno;
+	font-style: italic;
+	letter-spacing: 6px;
+}
+.board table td {
+	height:30px;
+	width:30px;
+	background:#fff;
+	text-align:center;
+	vertical-align:middle;
+}
+.board table td a {
+	text-decoration: none;
+	color: #fff;
+}
+.board.black table tr:nth-child(odd) td:nth-child(even),
+.board.black table tr:nth-child(even) td:nth-child(odd) {
+	background: #000;
+}
+.board.green table tr:nth-child(odd) td:nth-child(even),
+.board.green table tr:nth-child(even) td:nth-child(odd) {
+	background: #00a651;
+}
+.board.checkers .board-block span {
+	top: 163px;
+	left: -46px;
+}
+.board.chess .board-block span {
+	top: 186px;
+	left: -26px;
+}
+.board.othello .result-block .result {
+	text-align: justify; 
+	letter-spacing: 1px;
+	border: 0;
+}
+.board.othello .result-block .result:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	font-size:0;
+	line-height:0;
+}
+.board.othello .board-block span {
+	top: 172px;
+	left: -36px;
+}
+.board.othello .result-block span {
+	font-size: 1.8em;
+	display: inline-block;
+	padding: 15px;
+}
+.board.othello .result-block .white-team  {
+	display: inline-block;
+	vertical-align:top; 
+	border:1px solid #868686;
+}
+.board.othello .result-block .black-team  {
+	display: inline-block;
+	vertical-align: top;
+	border:1px solid #868686;
+	background: #545454;
+	color: #fff;
+}
+/* End of Boards Layaut */
+/* Mobile layout */
+@media screen and (max-width: 940px) {
+	.wrapper {
+		min-width: 0;
+	}
+	.content {
+		display: block;
+		width: 100%;
+		
+	}
+	.content section  {
+		display: block;
+		width: 280px;
+		margin: 15px auto;
+		border:1px solid #868686;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		
+	}
+	.checkers-wrap, .chess-wrap, .othello-wrap {
+		width: 240px;
+		display: table;
+		margin: 0 auto;
+	}
+	.board-block {
+		display:table-footer-group;
+
+	}
+	.result-block {
+		display:table-header-group;
+	}
+	.text-transform-vertical {
+		transform:rotate(0);
+		-moz-transform:rotate(0);
+		-o-transform:rotate(0);
+		-webkit-transform:rotate(0);
+		-ms-transform:rotate(0);
+	}
+	.board.checkers .board-block span, .board.chess .board-block span, .board.othello .board-block span {
+		display: block;
+		position: static;
+		padding-top: 10px;
+		text-align: center;
+	}
+	.content section.chess h2 {
+		text-align: left;
+		padding-left: 30px;
+	}
+}
+/* End of Mobile layout */
