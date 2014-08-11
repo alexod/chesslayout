@@ -25,7 +25,7 @@ chesslayout/
 
 ###/* Mobile layout */###
 
-- Additional CSS styling for mobile devices (main layout, borders layout) representation.
+- Additional CSS styling for mobile devices (main layout, boards layout) representation.
 
 
 
