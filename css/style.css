@@ -139,13 +139,11 @@ table {
 	-o-transform:rotate(-90deg);
 	-webkit-transform:rotate(-90deg);
 	-ms-transform:rotate(-90deg);
-	
 }
 .radius-3px {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	
 }
 .shadow-1px {
 	-webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.88);
@@ -158,7 +156,6 @@ table {
 	height: 20px; 
 	border-radius: 50%;
 	margin: auto;
-	
 }
 .circ.red-color {
 	background-color: #ee1f25;
